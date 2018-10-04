@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace gestion_evaluation
 {
@@ -6,7 +7,8 @@ namespace gestion_evaluation
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Student s = new Student("victor", "smits");
+            s.DisplayName();
         }
     }
 }
