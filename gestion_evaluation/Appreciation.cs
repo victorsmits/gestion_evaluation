@@ -6,19 +6,28 @@ namespace gestion_evaluation
     {
         private string appreciation;
 
-        public Appreciation(Activity a, string app) : base(a)
+        public Appreciation(Activity a, string app)
         {
             this.appreciation = app;
+            base.activité = a;
         }
 
-        public int Note()
+        public override int Note()
         {
+            switch (this.appreciation)
+            {
+                case "N": return 20;
+                case "C": return 16;
+                case "B": return 12;
+                case "TB": return 8;
+                case "X": return 4;
+            }
             return 0;
         }
 
-        public void SetAppreciation(string appreciation)
+        public void SetAppreciation(string app)
         {
-
+            this.appreciation = app;
         }
     }
 }

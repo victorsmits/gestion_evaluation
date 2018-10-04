@@ -5,19 +5,20 @@ namespace gestion_evaluation
     {
         private int note;
 
-        public Cote(Activity a, int score) : base(a)
+        public Cote(Activity a, int score)
         {
             this.note = score;
+            base.activité = a;
         }
 
-        public int Note()
+        public override int Note()
         {
-            return 0;
+            return note;
         }
 
         public void SetNote(int score)
         {
-
+            this.note = score;
         }
     }
 }

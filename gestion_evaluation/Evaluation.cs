@@ -1,18 +1,11 @@
 ﻿using System;
 namespace gestion_evaluation
 {
-    public class Evaluation
+    public abstract class Evaluation
     {
         public Activity activité;
 
-        public Evaluation(Activity a)
-        {
-            this.activité = a;
-        }
+        public abstract int Note();
 
-        public int Note()
-        {
-            return 0;
-        }
     }
 }

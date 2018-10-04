@@ -4,7 +4,7 @@ namespace gestion_evaluation
 {
     public class Student : Personne
     {
-        private List<Evaluation> cours;
+        private List<Evaluation> cours = new List<Evaluation>();
 
         public Student(string fname, string lname) : base(fname, lname)
         {
@@ -13,7 +13,7 @@ namespace gestion_evaluation
 
         public void Add(Evaluation evaluation)
         {
-
+            cours.Add(evaluation);
         }
 
         public double Average()
@@ -21,9 +21,13 @@ namespace gestion_evaluation
             return 0;
         }
 
-        public string Bulletin()
+        public void Bulletin()
         {
-            return "";
+            foreach (Evaluation e in cours)
+            {
+                Console.Write("\n{0} : {1}", e.activité.Name
+                              , e.Note());
+            }
         }
 
     }
