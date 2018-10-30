@@ -18,16 +18,31 @@ namespace gestion_evaluation
 
         public double Average()
         {
-            return 0;
-        }
+            double i = 0;
+            double tot = 0;
+            double average = 0;
 
-        public void Bulletin()
-        {
             foreach (Evaluation e in cours)
             {
-                Console.Write("\n{0} : {1}", e.activité.Name
-                              , e.Note());
+                tot += e.Note();
+                i++;
             }
+            average += tot / i;
+            return average;
+        }
+
+        public string Bulletin()
+        {
+            string bulletin = "";
+            foreach (Evaluation e in cours)
+            {
+                bulletin += "\n";
+                bulletin += e.activité.Name + " " + e.activité.Code;
+                bulletin += " : ";
+                bulletin += e.Note();
+
+            }
+            return bulletin;
         }
 
     }

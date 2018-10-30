@@ -15,9 +15,12 @@ namespace gestion_evaluation
             Activity a = new Activity(t, 1, "test", "tt");
 
             Cote c = new Cote(a, 0xA);
+            Appreciation A = new Appreciation(a, "TB");
+            s.Add(A);
             s.Add(c);
 
-            s.Bulletin();
+            Console.Write(s.Bulletin());
+            Console.Write("\nmoyenne" + s.Average());
         }
     }
 }

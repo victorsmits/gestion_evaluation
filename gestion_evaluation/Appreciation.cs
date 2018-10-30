@@ -16,10 +16,10 @@ namespace gestion_evaluation
         {
             switch (this.appreciation)
             {
-                case "N": return 20;
-                case "C": return 16;
-                case "B": return 12;
-                case "TB": return 8;
+                case "TB": return 20;
+                case "B": return 16;
+                case "C": return 12;
+                case "N": return 8;
                 case "X": return 4;
             }
             return 0;
